@@ -1,0 +1,73 @@
+### GET ALL WEBSITES
+GET http://127.0.0.1:8000/api/websites
+
+### SAVE A WEBSITE
+POST http://127.0.0.1:8000/api/websites/save
+Content-Type: application/json
+
+{
+    "name": "NUTRITIOUS INSIGHTS",
+    "description": "Good health is better than good medicine. Prevention is better than cure, blah blah blah. I believe you do not want to get sick.",
+    "domain": "http://nutritiousinsights.com",
+    "owners_name": "Javier Goodwill",
+    "owners_email": "javiergoodwill@nutritiousinsights.com",
+    "owners_phone": "255623491927"
+}
+
+### UPDATE A WEBSITE
+POST http://127.0.0.1:8000/api/websites/3
+Content-Type: application/json
+
+{
+    "name": "NUTRITIOUS INSIGHT",
+    "description": "Good health is better than good medicine. Prevention is better than cure, blah blah blah. I believe you do not want to get sick.",
+    "domain": "http://nutritiousinsight.com",
+    "owners_name": "Javier Goodwills",
+    "owners_email": "javiergoodwill@nutritiousinsight.com",
+    "owners_phone": "255623491927"
+}
+
+### GET ALL POSTS
+GET http://127.0.0.1:8000/api/posts
+
+### SAVE A POST
+POST http://127.0.0.1:8000/api/posts
+Content-Type: application/json
+
+{
+    "website_id": 3,
+    "title": "NUTRITIOUS INSIGHT",
+    "body": "Good health is better than good medicine. Prevention is better than cure, blah blah blah. I believe you do not want to get sick."
+}
+
+### UPDATE A POST
+POST http://127.0.0.1:8000/api/posts/1
+Content-Type: application/json
+
+{
+    "website_id": 3,
+    "title": "NUTRITIOUS INSIGHTS",
+    "body": "Good health is better than good medicine. Prevention is better than cure, blah blah blah. I believe you do not want to get sick. Eat late, sleep early."
+}
+
+### GET ALL SUBSCRIPTIONS
+GET http://127.0.0.1:8000/api/subscriptions
+
+### SAVE A POST
+POST http://127.0.0.1:8000/api/subscriptions/subscribe
+Content-Type: application/json
+
+{
+    "website_id": 1,
+    "user_id": 10
+}
+
+### UPDATE A POST
+POST http://127.0.0.1:8000/api/posts/1
+Content-Type: application/json
+
+{
+    "website_id": 3,
+    "title": "NUTRITIOUS INSIGHTS",
+    "body": "Good health is better than good medicine. Prevention is better than cure, blah blah blah. I believe you do not want to get sick. Eat late, sleep early."
+}
